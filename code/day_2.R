@@ -3,6 +3,7 @@ library(tidyverse)
 
 ## part 1
 reports <- readLines("data/day2_input")
+levels <- lapply(str_split(string = reports, pattern = " "), as.numeric)
 
 isSafe <- function(lvls) {
   diffs <- diff(lvls)
